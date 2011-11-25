@@ -69,21 +69,54 @@ public interface SGDisplay{
      */
     public void setBlock(int x, int y, char c, Color fore, Color back);
 
-    /**Lets the component know that it should update it's display. This will take
+    /**Lets the component know that it should update it's display. This should take
      * advantage of the component's default buffering scheme.
      */
     public void refresh();
 
+    /**
+     * Returns a Dimension representing the size of a single cell in the grid.
+     * 
+     * @return 
+     */
     public Dimension getCellDimension();
 
+    /**
+     * Manually sets what the dimension of all cells should be. This does not force
+     * a redraw or resize. Such methods must be called separately.
+     * 
+     * @param cellDimension 
+     */
     public void setCellDimension(Dimension cellDimension);
 
+    /**
+     * Gets the number of columns in the current grid.
+     * 
+     * @return 
+     */
     public int getColumns();
 
+    /**
+     * Sets how many columns to make in the grid. This does not force a redraw
+     * or resize. Such methods must be called separately.
+     * 
+     * @param columns 
+     */
     public void setColumns(int columns);
 
+    /**
+     * Gets the number of rows in the current grid.
+     * 
+     * @return 
+     */
     public int getRows();
 
+    /**
+     * Sets how many rows to make in the grid. This does not force a redraw or resize.
+     * Such methods must be called separately.
+     * 
+     * @param rows 
+     */
     public void setRows(int rows);
 
     /**
